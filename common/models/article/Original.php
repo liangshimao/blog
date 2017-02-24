@@ -26,7 +26,7 @@ class Original extends ActiveRecord
     {
         $query = self::find()->where(['del_flag' => DEL_FLAG_FALSE]);
         if(!empty($name)){
-            $query->andFilterWhere(['like','name',$name]);
+            $query->andFilterWhere(['like','title',$name]);
         }
         $query->orderBy(['edit_time'=> SORT_DESC]);
         $countQuery = clone $query;

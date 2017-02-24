@@ -23,7 +23,7 @@ class PositiveController extends BaseController
                 'class' => 'kucha\ueditor\UEditorAction',
                 'config'=>[
                     'imageManagerListPath'=>'/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}',
-                    'imageUrlPrefix' => 'http://admin.blog.com']
+                    'imageUrlPrefix' => MPS_URL]
             ]
         ];
     }

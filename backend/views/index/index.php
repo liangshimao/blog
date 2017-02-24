@@ -85,7 +85,7 @@ use common\components\Tools;
                     </div>
                     <div class="menulist" style="">
                         <div class="menutwo" data-url="<?=Url::toRoute('/article/about/index')?>" name="about">
-                            <i class="glyphicon  glyphicon-film"></i>
+                            <i class="glyphicon  glyphicon-info-sign"></i>
                             关于自己
                         </div>
                         <div class="menutwo" data-url="<?=Url::toRoute('/article/tags/index')?>" name="label">

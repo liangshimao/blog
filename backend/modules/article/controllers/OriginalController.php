@@ -23,13 +23,13 @@ class OriginalController extends BaseController
                 'class' => 'kucha\ueditor\UEditorAction',
                 'config'=>[
                     'imageManagerListPath'=>'/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}',
-                    'imageUrlPrefix' => 'http://admin.blog.com']
+                    'imageUrlPrefix' => MPS_URL]
             ]
         ];
     }
     public function actionIndex()
     {
-        $name = $this->request->get('title');
+        $name = $this->request->get('name');
         $pageSize = $this->request->get('per-page', PAGESIZE);
         $info = Original::getAll($name,$pageSize);
         return $this->render('index', [
