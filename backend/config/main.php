@@ -15,6 +15,8 @@ $config = [
     'defaultRoute' => 'index',
     'modules' => [
         'basic' => ['class' => 'backend\modules\basic\BasicModule'],
+        'article' => ['class' => 'backend\modules\article\ArticleModule'],
+        'action' => ['class' => 'backend\modules\action\ActionModule'],
     ],
     'components' => [
         'request' => [

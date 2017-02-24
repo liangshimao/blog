@@ -12,7 +12,7 @@ use common\components\Tools;
                     <tbody>
                     <tr>
                         <td style="padding:0px 10px;"><img src="/images/xh829.png" height="34" width="34"></td>
-                        <td style="font-size:18px;padding-right:20px"><b>优悦佳品后台管理系统</b></td>
+                        <td style="font-size:18px;padding-right:20px"><b>smile博客后台管理系统</b></td>
                     </tr>
                     </tbody>
                 </table>
@@ -20,7 +20,8 @@ use common\components\Tools;
             <td width="80%">
                 <div class="topmenubg">
                     <span menu="0" class="spanactive"><i class="glyphicon glyphicon-th-large"></i> 基础数据</span>
-                    <span menu="1"><i class="glyphicon glyphicon-glass"></i> 优悦佳品</span>
+                    <span menu="1"><i class="glyphicon glyphicon-file"></i> 博客内容</span>
+                    <span menu="2"><i class="glyphicon glyphicon-refresh"></i> 博客互动</span>
                 </div>
             </td>
         </tr>
@@ -78,49 +79,55 @@ use common\components\Tools;
                 </div>
                 <div id="left_menu_1" style="display:none">
                     <div class="menuone" disab="1" status="true">
-                        <i class="glyphicon glyphicon-picture"></i>
-                        图片管理
+                        <i class="glyphicon glyphicon-tasks"></i>
+                        基础数据
                         <span class="caret caret-upc"></span>
                     </div>
                     <div class="menulist" style="">
-                        <div class="menutwo" data-url="<?=Url::toRoute('/youyue/banner/index')?>" name="banner">
+                        <div class="menutwo" data-url="<?=Url::toRoute('/article/about/index')?>" name="about">
                             <i class="glyphicon  glyphicon-film"></i>
-                            轮播图
+                            关于自己
                         </div>
-                        <div class="menutwo" data-url="<?=Url::toRoute('/youyue/logo/index')?>" name="logo">
-                            <i class="glyphicon glyphicon-zoom-in"></i>
-                            logo管理
-                        </div>
-                        <div class="menutwo" data-url="<?=Url::toRoute('/youyue/ico/index')?>" name="ico">
-                            <i class="glyphicon  glyphicon-zoom-out"></i>
-                            ico管理
+                        <div class="menutwo" data-url="<?=Url::toRoute('/article/tags/index')?>" name="label">
+                            <i class="glyphicon glyphicon-tags"></i>
+                            文章标签
                         </div>
                     </div>
                     <div class="menuone" disab="1" status="true">
                         <i class="glyphicon glyphicon-pencil"></i>
-                        文字管理
+                        文章管理
                         <span class="caret caret-upc"></span>
                     </div>
                     <div class="menulist" style="">
-                        <div class="menutwo" data-url="<?=Url::toRoute('/youyue/company/index')?>" name="company">
-                            <i class="glyphicon  glyphicon-file"></i>
-                            公司介绍
+                        <div class="menutwo" data-url="<?=Url::toRoute('/article/original/index')?>" name="original">
+                            <i class="glyphicon  glyphicon-list-alt"></i>
+                            个人原创
                         </div>
-                        <div class="menutwo" data-url="<?=Url::toRoute('/youyue/history/index')?>" name="history">
-                            <i class="glyphicon glyphicon-time"></i>
-                            发展历程
-                        </div>
-                        <div class="menutwo" data-url="<?=Url::toRoute('/youyue/idea/index')?>" name="idea">
-                            <i class="glyphicon glyphicon-info-sign"></i>
-                            公司理念
-                        </div>
-                        <div class="menutwo" data-url="<?=Url::toRoute('/youyue/info/index')?>" name="info">
+                        <div class="menutwo" data-url="<?=Url::toRoute('/article/beauty/index')?>" name="beauty">
                             <i class="glyphicon glyphicon-list-alt"></i>
-                            公司信息
+                            优美散文
                         </div>
-                        <div class="menutwo" data-url="<?=Url::toRoute('/youyue/duty/index')?>" name="duty">
-                            <i class="glyphicon glyphicon-credit-card"></i>
-                            职位管理
+                        <div class="menutwo" data-url="<?=Url::toRoute('/article/positive/index')?>" name="positive">
+                            <i class="glyphicon glyphicon-list-alt"></i>
+                            正的能量
+                        </div>
+                    </div>
+                </div>
+
+                <div id="left_menu_2" style="display:none">
+                    <div class="menuone" disab="1" status="true">
+                        <i class="glyphicon glyphicon-link"></i>
+                        互动管理
+                        <span class="caret caret-upc"></span>
+                    </div>
+                    <div class="menulist" style="">
+                        <div class="menutwo" data-url="<?=Url::toRoute('/action/comment/index')?>" name="comment">
+                            <i class="glyphicon  glyphicon-pushpin"></i>
+                            文章评论
+                        </div>
+                        <div class="menutwo" data-url="<?=Url::toRoute('/action/left/index')?>" name="left">
+                            <i class="glyphicon glyphicon-send"></i>
+                            博客留言
                         </div>
                     </div>
                 </div>

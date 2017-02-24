@@ -9,13 +9,14 @@ $params = array_merge(
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
-    'name' => '悦动力官网-中国饮料驰名商标',
+    'name' => '个人博客网站',
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'defaultRoute' => 'index',
     'components' => [
         'request' => [
             'cookieValidationKey' => 'Joy6w5Z_l-w6HIVv13B70X4zoIVfPG4u',
+            'enableCsrfValidation' => false,
         ],
         'user' => [
             'identityClass' => 'app\models\User',
