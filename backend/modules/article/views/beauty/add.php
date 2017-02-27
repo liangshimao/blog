@@ -14,6 +14,17 @@ use \kucha\ueditor\UEditor;
                 </td>
             </tr>
             <tr>
+                <th width="80">文章标签：</th>
+                <td>
+                    <select name="tag_id" id="tag_id" class="form-control" style="width:200px;">
+                        <option value="">-请选择标签-</option>
+                        <?php if($tagList): foreach($tagList as $key=>$val):?>
+                            <option value="<?=$key;?>"><?=$val;?></option>
+                        <?php endforeach;endif;?>
+                    </select>
+                </td>
+            </tr>
+            <tr>
                 <th width="80">散文内容：</th>
                 <td>
                     <?php

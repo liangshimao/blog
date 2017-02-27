@@ -12,6 +12,7 @@ namespace backend\modules\article\controllers;
 use backend\components\ShowMessage;
 use backend\controllers\BaseController;
 use common\models\article\Beauty;
+use common\models\article\Tags;
 use yii\helpers\Url;
 
 class BeautyController extends BaseController
@@ -49,7 +50,10 @@ class BeautyController extends BaseController
                 return $this->redirect(['index']);
             }
         }
-        return $this->render('add');
+        $tagList = Tags::getList();
+        return $this->render('add',[
+            'tagList' => $tagList,
+        ]);
     }
 
     public function actionEdit($id){
@@ -62,8 +66,10 @@ class BeautyController extends BaseController
             }
         }
         $model = Beauty::findOne($id);
+        $tagList = Tags::getList();
         return $this->render('edit',[
             'model' => $model,
+            'tagList' => $tagList,
         ]);
     }
 

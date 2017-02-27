@@ -22,6 +22,7 @@ use common\components\Tools;
     <tr>
         <th>序号</th>
         <th>优美散文标题</th>
+        <th>优美散文标签</th>
         <th>优美散文内容</th>
         <th>修改时间</th>
         <th>操作</th>
@@ -32,6 +33,7 @@ use common\components\Tools;
         <tr>
             <td><?= ++$k; ?></td>
             <td><?= $val->title; ?></td>
+            <td><?=isset($val->tag->name)?$val->tag->name:'';?></td>
             <td><?= Tools::cutUtf8(strip_tags($val->content),30);?></td>
             <td><?= $val->edit_time;?></td>
             <td>

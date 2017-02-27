@@ -23,6 +23,7 @@ use common\components\Tools;
         <th>序号</th>
         <th>正能量标题</th>
         <th>正能量内容</th>
+        <th>正能量标签</th>
         <th>修改时间</th>
         <th>操作</th>
     </tr>
@@ -32,6 +33,7 @@ use common\components\Tools;
         <tr>
             <td><?= ++$k; ?></td>
             <td><?= $val->title; ?></td>
+            <td><?=isset($val->tag->name)?$val->tag->name:'';?></td>
             <td><?= Tools::cutUtf8(strip_tags($val->content),30);?></td>
             <td><?= $val->edit_time;?></td>
             <td>

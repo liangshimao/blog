@@ -74,4 +74,9 @@ class Positive extends ActiveRecord
             return false;
         }
     }
+
+    public function getTag()
+    {
+        return $this->hasOne(Tags::className(),['id' => 'tag_id']);
+    }
 }

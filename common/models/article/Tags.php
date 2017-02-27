@@ -9,6 +9,7 @@
 namespace common\models\article;
 use yii\db\ActiveRecord;
 use yii\data\Pagination;
+use yii\helpers\ArrayHelper;
 
 class Tags extends ActiveRecord
 {
@@ -73,5 +74,11 @@ class Tags extends ActiveRecord
         }else{
             return false;
         }
+    }
+
+    public static function getList()
+    {
+        $list = self::find()->where(['del_flag' => DEL_FLAG_FALSE])->orderBy(['edit_time' => SORT_DESC])->asArray()->all();
+        return ArrayHelper::map($list,'id','name');
     }
 }
