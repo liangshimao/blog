@@ -92,6 +92,10 @@ use common\components\Tools;
                             <i class="glyphicon glyphicon-tags"></i>
                             文章标签
                         </div>
+                        <div class="menutwo" data-url="<?=Url::toRoute('/article/timer/index')?>" name="timer">
+                            <i class="glyphicon glyphicon-time"></i>
+                            碎言碎语
+                        </div>
                     </div>
                     <div class="menuone" disab="1" status="true">
                         <i class="glyphicon glyphicon-pencil"></i>

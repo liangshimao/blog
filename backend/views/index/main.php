@@ -12,7 +12,7 @@
 </style>
 <div class="panel panel-success">
     <div class="panel-heading">
-        <h3 class="panel-title">关于优悦佳品</h3>
+        <h3 class="panel-title">关于smile博客</h3>
     </div>
     <div class="panel-body">
         <div style="line-height:25px">

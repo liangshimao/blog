@@ -12,7 +12,7 @@ $config = [
     'name' => '个人博客网站',
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'defaultRoute' => 'index',
+    'defaultRoute' => 'about',
     'components' => [
         'request' => [
             'cookieValidationKey' => 'Joy6w5Z_l-w6HIVv13B70X4zoIVfPG4u',
@@ -38,7 +38,7 @@ $config = [
             'class' => 'yii\web\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'suffix' => '.html',
+            'suffix' => '',
             'cache' => false,
             'rules' => [
             ],
