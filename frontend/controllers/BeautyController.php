@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: smile
- * Date: 17-2-27
- * Time: 下午4:38
+ * Date: 17-2-28
+ * Time: 下午2:03
  */
 
 namespace frontend\controllers;
@@ -11,7 +11,7 @@ namespace frontend\controllers;
 
 use yii\web\Controller;
 
-class LeftController extends Controller
+class BeautyController extends Controller
 {
     public function actionIndex()
     {

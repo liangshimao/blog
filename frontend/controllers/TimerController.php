@@ -9,12 +9,28 @@
 namespace frontend\controllers;
 
 
+use common\components\OutPut;
+use common\models\article\Timer;
 use yii\web\Controller;
-
+use Yii;
 class TimerController extends Controller
 {
     public function actionIndex()
     {
-        return $this->render('index');
+        $timer = Timer::getAll('',10);
+        return $this->renderPartial('index',[
+            'timer' => $timer['data'],
+        ]);
+    }
+
+    public function actionPraise_ajax()
+    {
+        if(!Yii::$app->request->isAjax){
+            OutPut::returnJson('非法请求',201);
+        }
+        $id = Yii::$app->request->post('um_id');
+        Timer::updateAllCounters(['praise' => 1],['id' => $id]);
+        $model = Timer::findOne($id);
+        OutPut::returnJson('成功',200,['count' => $model->praise]);
     }
 }

@@ -22,6 +22,7 @@ use common\components\Tools;
     <tr>
         <th>序号</th>
         <th>个人介绍名称</th>
+        <th>赞的数量</th>
         <th>个人介绍内容</th>
         <th>操作</th>
     </tr>
@@ -31,6 +32,7 @@ use common\components\Tools;
         <tr>
             <td><?= ++$k; ?></td>
             <td><?= $val->name; ?></td>
+            <td><?= $val->praise;?></td>
             <td><?= Tools::cutUtf8(strip_tags($val->content),30);?></td>
             <td>
                 <a class="btn btn-success buttonbtn btn-info button"

@@ -74,8 +74,8 @@ use yii\helpers\Url;
     </div>
     <div id="nav" class="menu-%e7%94%b5%e8%84%91%e8%8f%9c%e5%8d%95-container">
         <ul id="menu-%e7%94%b5%e8%84%91%e8%8f%9c%e5%8d%95" class="menu">
-            <li id="menu-item-158" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item page_item menu-item-158"><a href="<?=Url::toRoute('/about/index')?>">关于我</a></li>
-            <li id="menu-item-161" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-161"><a href="<?=Url::toRoute('/original/index')?>">生活感悟</a></li>
+            <li id="menu-item-158" class="menu-item menu-item-type-post_type menu-item-object-page page_item menu-item-158"><a href="<?=Url::toRoute('/about/index')?>">关于我</a></li>
+            <li id="menu-item-161" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-161 current-menu-item current_page_item "><a href="<?=Url::toRoute('/original/index')?>">生活感悟</a></li>
             <li id="menu-item-163" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-163"><a href="<?=Url::toRoute('/timer/index')?>">碎言碎语</a></li>
             <li id="menu-item-162" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-162"><a href="<?=Url::toRoute('/beauty/index')?>">优美散文</a></li>
             <li id="menu-item-191" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-191"><a href="<?=Url::toRoute('/positive/index')?>">正能量</a></li>

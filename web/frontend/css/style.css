@@ -142,26 +142,26 @@ article ul.text img {
     width: 65px;
     height: 65px;
 }
-.textfoot div.qqzone{background: url(images/sns/qqzone-a.png);}
-.textfoot div.weixin{background: url(images/sns/weixin-a.png);}
-.textfoot div.weibo{background: url(images/sns/weibo-a.png);}
-.textfoot div.qq{background: url(images/sns/qq-a.png);}
-.textfoot div.taobao{background: url(images/sns/taobao-a.png);}
-.textfoot div.douban{background: url(images/sns/douban-a.png);}
-.textfoot div.zhihu{background: url(images/sns/zhihu-a.png);}
-.textfoot div.tieba{background: url(images/sns/tieba-a.png);}
-.textfoot div.renren{background: url(images/sns/renren-a.png);}
+.textfoot div.qqzone{background: url(../image/qqzone-a.png);}
+.textfoot div.weixin{background: url(../image/weixin-a.png);}
+.textfoot div.weibo{background: url(../image/weibo-a.png);}
+.textfoot div.qq{background: url(../image/qq-a.png);}
+.textfoot div.taobao{background: url(../image/taobao-a.png);}
+.textfoot div.douban{background: url(../image/douban-a.png);}
+.textfoot div.zhihu{background: url(../image/zhihu-a.png);}
+.textfoot div.tieba{background: url(../image/tieba-a.png);}
+.textfoot div.renren{background: url(../image/renren-a.png);}
 
 
-.textfoot div.qqzone:hover{background: url(images/sns/qqzone.png);}
-.textfoot div.weixin:hover{background: url(images/sns/weixin.png);}
-.textfoot div.weibo:hover{background: url(images/sns/weibo.png);}
-.textfoot div.qq:hover{background: url(images/sns/qq.png);}
-.textfoot div.taobao:hover{background: url(images/sns/taobao.png);}
-.textfoot div.douban:hover{background: url(images/sns/douban.png);}
-.textfoot div.zhihu:hover{background: url(images/sns/zhihu.png);}
-.textfoot div.tieba:hover{background: url(images/sns/tieba.png);}
-.textfoot div.renren:hover{background: url(images/sns/renren.png);}
+.textfoot div.qqzone:hover{background: url(../image/qqzone.png);}
+.textfoot div.weixin:hover{background: url(../image/weixin.png);}
+.textfoot div.weibo:hover{background: url(../image/weibo.png);}
+.textfoot div.qq:hover{background: url(../image/qq.png);}
+.textfoot div.taobao:hover{background: url(../image/taobao.png);}
+.textfoot div.douban:hover{background: url(../image/douban.png);}
+.textfoot div.zhihu:hover{background: url(../image/zhihu.png);}
+.textfoot div.tieba:hover{background: url(../image/tieba.png);}
+.textfoot div.renren:hover{background: url(../image/renren.png);}
 
 /* footer */
 footer { outline: 5px solid #E15782;background: #242221; width: 100%;margin-top:80px;z-index: 9999;position: absolute;  }
@@ -870,7 +870,7 @@ a.goumai:hover{color: #fff;}
 
 
 div#div-pin {
-    background: url("images/pin.png") no-repeat center center;
+    background: url("../image/pin.png") no-repeat center center;
     width: 38px;
     height: 38px;
     display: block;
@@ -890,7 +890,7 @@ div#div-pin {
 .v{
     width: 20px;
     height: 20px;
-    background: url(images/v.png);
+    background: url(../image/v.png);
     background-position: -1px 149px;
     position: absolute;
     margin: 0 5px;
@@ -908,13 +908,13 @@ div#div-pin {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
     color: #fff;
-    background-image: url(images/rocket_bg.png);
+    background-image: url(../image/rocket_bg.png);
     width: 71px;
     height: 135px;
     z-index: 9999;
 }
 .cd-top:hover {
-    background-image: url(images/rocket_sbg.png);
+    background-image: url(../image/rocket_sbg.png);
 }
 .cd-top.cd-is-visible {
     /* the button becomes visible */
@@ -965,14 +965,14 @@ div#div-pin {
     background: no-repeat;
 }
 .socialShare .msb_network_button.bds_tsina {
-    background: url(images/social.png) no-repeat -130px -87px;
+    background: url(../image/social.png) no-repeat -130px -87px;
 }
 .socialShare .msb_network_button.bds_qzone {
-    background: url(images/social.png) no-repeat -73px -20px;
+    background: url(../image/social.png) no-repeat -73px -20px;
 }
 
 .socialShare .msb_network_button.bds_weixin {
-    background: url(images/social.png) no-repeat -73px -87px;
+    background: url(../image/social.png) no-repeat -73px -87px;
 }
 
 .bdshare-button-style1-24 a, .bdshare-button-style1-24 .bds_more {
@@ -983,7 +983,7 @@ div#div-pin {
 .v-address{
     height: 24px;
     float: left;
-    background: url(images/address.png);
+    background: url(../image/address.png);
     background-repeat: no-repeat;
     padding-left: 24px;
     line-height: 25px;

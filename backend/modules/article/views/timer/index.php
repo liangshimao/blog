@@ -23,6 +23,7 @@ use common\components\Tools;
         <th>序号</th>
         <th>内容</th>
         <th>日期</th>
+        <th>赞</th>
         <th>修改时间</th>
         <th>操作</th>
     </tr>
@@ -33,6 +34,7 @@ use common\components\Tools;
             <td><?= ++$k; ?></td>
             <td><?= Tools::cutUtf8($val->name,30); ?></td>
             <td><?= $val->time;?></td>
+            <td><?= $val->praise;?></td>
             <td><?= $val->edit_time;?></td>
             <td>
                 <a class="btn btn-warning buttonbtn btn-info button"

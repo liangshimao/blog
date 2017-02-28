@@ -67,4 +67,9 @@ class About extends ActiveRecord
             return false;
         }
     }
+    
+    public static function getOne()
+    {
+        return self::find()->where(['del_flag' => DEL_FLAG_FALSE])->one();
+    }
 }
