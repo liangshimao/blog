@@ -3,6 +3,8 @@
 namespace backend\modules\article\controllers;
 use backend\components\ShowMessage;
 use backend\controllers\BaseController;
+use common\components\Image;
+use common\components\OutPut;
 use common\models\article\About;
 use yii\helpers\Url;
 
@@ -36,6 +38,7 @@ class AboutController extends BaseController
     {
         if($this->request->isPost){
             $params = $this->request->post();
+            $_FILES['thumb_file']['name'] && $params['img_url'] = Image::upload($_FILES['thumb_file']);
             if(About::addRecord($params)){
                 return $this->redirect(['index']);
             }
@@ -46,6 +49,7 @@ class AboutController extends BaseController
     public function actionEdit($id){
         if($this->request->isPost){
             $params = $this->request->post();
+            $_FILES['thumb_file']['name'] && $params['img_url'] = Image::upload($_FILES['thumb_file']);
             if(About::editRecord($id,$params)){
                 return $this->redirect(['index']);
             }
@@ -70,6 +74,7 @@ class AboutController extends BaseController
             'model' => $model,
         ]);
     }
+
     
     
 }

@@ -1,21 +1,20 @@
 <?php
 use yii\helpers\Url;
-use common\components\Tools;
 ?>
 <html>
 <head>
-    <title>生活感悟-梁世茂的个人博客</title>
-    <meta name="keywords" content="个人博客,梁世茂">
-    <meta name="description" content="个人博客,梁世茂">
-    <link rel="shortcut icon" href="/image/cropped-1111.png" />
+    <title>优美散文-梁世茂的个人博客</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="/image/cropped-1111.png"/>
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <link href="/css/comment.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/font.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/css/jquery.fancybox-buttons.css" />
-    <link rel="stylesheet" type="text/css" href="/css/jquery.fancybox-thumbs.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/tips.css" />
+    <link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=2.1.2" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/css/jquery.fancybox-buttons.css?v=1.0.5" />
+    <link rel="stylesheet" type="text/css" href="/css/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <link rel="stylesheet" type="text/css" href="/css/tips.css?v=1.0.7" />
     <link rel="stylesheet" type="text/css" href="/css/sweetalert.css" />
     <script type="text/javascript" src="/js/comments-ajax.js"></script>
     <script src="/js/jquery-ias.min.js"></script>
@@ -28,7 +27,6 @@ use common\components\Tools;
     <script type="text/javascript" src="/js/jquery.fancybox-buttons.js?v=1.0.5"></script>
     <script type="text/javascript" src="/js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
     <script type="text/javascript" src="/js/jquery.fancybox-media.js?v=1.0.5"></script>
-
     <script type="text/javascript">
         $(document).ready(function() {
             $('.fancybox').fancybox();
@@ -131,8 +129,13 @@ use common\components\Tools;
                 </ul>
         </ul>
     </div>
+
 </header>
 
+
+<style type="text/css">
+    .textfoot div {width: inherit;height: inherit;}
+</style>
 <div class="mainContent">
     <div style="position: absolute;right: 40px;">
         <img src="/image/music.png" border="0">
@@ -165,7 +168,7 @@ use common\components\Tools;
     <aside>
         <div class="sidebar-avatar">
             <div class="avatar">
-                <a href="http://m.jinsom.cn/about">
+                <a href="<?=Url::toRoute('/')?>">
                     <img src="http://m.jinsom.cn/wp-content/uploads/2016/08/photo.jpg">
                 </a>
             </div>
@@ -243,48 +246,78 @@ use common\components\Tools;
         })();
     </script>
     <div class="blogitem">
-        <?php foreach ($list as $value):?>
         <article>
-            <h2 class="title"><a href="<?=Url::toRoute(['/original/detail','id' => $value->id]);?>" title="<?=$value->title;?>"><?=$value->title;?></a></h2>
-            <ul class="text">
-                <p><?=Tools::cutUtf8($value->content,50,false);?>&hellip;&#8230;</p>
-            </ul>
+            <h2 class="title"><a href="javascript:;" title="<?=$model->title;?>"><?=$model->title;?></a>
+                <n id="testemail" href="javascript:;" style="float: right;cursor: pointer;" title="发至邮箱">
+                    <i class="fa fa-envelope-o " style="line-height: 28px;"></i></n>
+            </h2>
+            <ul class="text"><?=$model->content;?></ul>
             <div class="textfoot">
-                <a href="/" style="float: left;"><?=date('Y/m/d',strtotime($value->edit_time));?></a>
-                <a href="javascript:;">#<?=isset($value->tag->name)?$value->tag->name:'';?></a>
                 <m class="post-like">
-                    <a href="javascript:;" data-action="ding" data-id="<?=$value->id;?>" class="favorite">
-                        <span class="count"><?=$value->praise;?></span>
+                    <a href="javascript:;" data-action="ding" data-id="<?=$model->id;?>" class="favorite">
+                        <span class="count"><?=$model->praise;?></span>
                     </a>
                 </m>
+                <a href="/" style="float: left;"><?=date('Y/m/d',strtotime($model->edit_time));?></a> <a href="/"></a>
+                <a href="javascript:;">#<?=isset($model->tag->name)?$model->tag->name:'';?></a>
+            </div>
         </article>
-        <?php endforeach;?>
-
-
-        <div class="post-nav-inside">
-            <div class="post-nav-left"></div>
-            <div class="post-nav-right"><a href="http://m.jinsom.cn/category/manshenghuo/page/2" >下一页</a></div>
-        </div>
-
     </div>
-</div>
+
+
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            function grin(tag) {
+                var myField;
+                tag = ' ' + tag + ' ';
+                if (document.getElementById('comment') && document.getElementById('comment').type == 'textarea') {
+                    myField = document.getElementById('comment');
+                } else {
+                    return false;
+                }
+                if (document.selection) {
+                    myField.focus();
+                    sel = document.selection.createRange();
+                    sel.text = tag;
+                    myField.focus();
+                }
+                else if (myField.selectionStart || myField.selectionStart == '0') {
+                    var startPos = myField.selectionStart;
+                    var endPos = myField.selectionEnd;
+                    var cursorPos = startPos;
+                    myField.value = myField.value.substring(0, startPos)
+                        + tag
+                        + myField.value.substring(endPos, myField.value.length);
+                    cursorPos += tag.length;
+                    myField.focus();
+                    myField.selectionStart = cursorPos;
+                    myField.selectionEnd = cursorPos;
+                }      else {
+                    myField.value += tag;
+                    myField.focus();
+                }
+            }
+            /* ]]> */
+        </script>
+    </div>
 <div class="blank"></div>
-<footer>
-    <div class="footavatar">
-        <img src="http://m.jinsom.cn/wp-content/uploads/2016/08/photo.jpg" class="footphoto">
-        <ul class="footinfo">
-            <p class="fname"><a href="#" >林可可</a></p>
-            <p class="finfo">兴趣：养猫，旅行，音乐</p>
-            <p class="finfo">性格：可冷可热、小逗比、</p>
-            <div style="float:right;font-size: 16px;">——越努力，越幸运！</div>
-        </ul>
-    </div>
-    <div class="Copyright">
-        <ul style="clear: both;">
-            <p>© Copyright 2009-2016 梁世茂·博客</p>
-        </ul>
-    </div>
-</footer>
+
+    <footer>
+        <div class="footavatar">
+            <img src="http://m.jinsom.cn/wp-content/uploads/2016/08/photo.jpg" class="footphoto">
+            <ul class="footinfo">
+                <p class="fname"><a href="#" >林可可</a></p>
+                <p class="finfo">兴趣：养猫，旅行，音乐</p>
+                <p class="finfo">性格：可冷可热、小逗比、</p>
+                <div style="float:right;font-size: 16px;">——越努力，越幸运！</div>
+            </ul>
+        </div>
+        <div class="Copyright">
+            <ul style="clear: both;">
+                <p>© Copyright 2009-2016 梁世茂·博客</p>
+            </ul>
+        </div>
+    </footer>
 
 
 <script>
@@ -299,31 +332,10 @@ use common\components\Tools;
 
 
 </script>
-
-<!-- ajax加载评论 -->
-<!-- 文章加载 -->
-<script type="text/javascript">
-    $(document).ready(function (){
-        var ias = $.ias({
-            container: ".blogitem", //包含所有文章的元素
-            item: "article", //文章元素
-            pagination: ".post-nav-inside", //分页元素
-            next: ".post-nav-right a", //下一页元素
-        });
-
-        ias.extension(new IASTriggerExtension({
-            text: '<span class="ajax-more">加载更多</span>', //此选项为需要点击时的文字
-            offset: 1, //设置此项后，到 offset+1 页之后需要手动点击才能加载，取消此项则一直为无限加载
-        }));
-        ias.extension(new IASSpinnerExtension());
-        ias.extension(new IASNoneLeftExtension({
-            text: ' ', // 加载完成时的提示
-        }));
-    });
-</script>
 <!-- 喜欢 -->
 <script type="text/javascript">
     $.fn.postLike = function() {
+
         $(this).addClass('done');
         var id = $(this).data("id"),
             action = $(this).data('action'),
@@ -333,7 +345,7 @@ use common\components\Tools;
             um_id: id,
             um_action: action
         };
-        $.post("<?=Url::toRoute('/original/praise_ajax')?>", ajax_data,
+        $.post("<?=Url::toRoute('/beauty/praise_ajax')?>", ajax_data,
             function(res) {
                 if(res.code == 200){
                     $(rateHolder).html(res.data.count);
@@ -357,12 +369,14 @@ use common\components\Tools;
                 $('ul', this).slideUp(0)});
     });
 </script>
+
+
+<!-- 返回顶部 -->
 <a href="#0" class="cd-top cd-is-visible"></a>
+
+<!-- 分享 -->
 </body>
 </html>
 
-
-
-
-
+<!-- 手机页面结束 -->
 

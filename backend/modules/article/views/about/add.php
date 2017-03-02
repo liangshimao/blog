@@ -14,6 +14,14 @@ use \kucha\ueditor\UEditor;
                 </td>
             </tr>
             <tr>
+                <th width="100">头像信息：</th>
+                <td>
+                    <img src="" id="thumb" width="200" height="150">
+                    <a href="javascript:;" style="margin-left:15px;" id="thumb_select">>>点击这里选择图片</a>
+                    <input type="file" id="thumb_file" name="thumb_file" style="display: none;">
+                </td>
+            </tr>
+            <tr>
                 <th width="80">介绍内容：</th>
                 <td>
                     <?php
@@ -51,7 +59,31 @@ use \kucha\ueditor\UEditor;
         <input type="button" value="返回" class="btn btn-success" style="margin:10px;padding:8px 15px;" onclick="goback()">
     </div>
 </form>
+
 <script>
+    $("#thumb_select").click(function(){
+        $("#thumb_file").click();
+    });
+    $("#thumb_file").change(function(){
+        var objUrl = getObjectURL(this.files[0]) ;
+        console.log("objUrl = "+objUrl) ;
+        if (objUrl) {
+            $("#thumb").attr("src", objUrl);
+        }
+    }) ;
+    //建立一個可存取到該file的url
+    function getObjectURL(file) {
+        var url = null ;
+        if (window.createObjectURL!=undefined) { // basic
+            url = window.createObjectURL(file) ;
+        } else if (window.URL!=undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file) ;
+        } else if (window.webkitURL!=undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file) ;
+        }
+        return url ;
+    }
+    
     $("#myform").submit(function(){
         var name = $("input[name=name]").val();
         if(name == ""){

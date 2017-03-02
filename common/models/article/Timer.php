@@ -9,6 +9,7 @@
 namespace common\models\article;
 
 
+use common\models\basic\Mood;
 use yii\data\Pagination;
 use yii\db\ActiveRecord;
 
@@ -75,5 +76,10 @@ class Timer extends ActiveRecord
         }else{
             return false;
         }
+    }
+
+    public function getMood()
+    {
+        return $this->hasOne(Mood::className(),['id' => 'mood_id']);
     }
 }

@@ -76,7 +76,7 @@ use yii\helpers\Url;
     </script>
 </head>
 <body style="cursor: url(http://m.jinsom.cn/wp-content/uploads/2016/11/3.gif),auto;">
-<header id="container2" style="background: #226039 url(http://m.jinsom.cn/wp-content/themes/jinsomM/images/bg/2.jpg) center 0 scroll no-repeat;">
+<header id="container2" style="background: #226039 url(/image/2.jpg) center 0 scroll no-repeat;">
     <div class="popover left" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop7">
         <div class="arrow"></div>
         <div class="popover-inner">

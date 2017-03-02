@@ -5,6 +5,21 @@ use common\components\Tools;
 ?>
 
 <link href="/css/form.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="/css/lunbotu.css">
+<link type="text/css" rel="stylesheet" href="/css/lunbotu/style.css">
+<script type="text/javascript" src="/js/jquery.min2.js"></script>
+<script type="text/javascript" src="/js/pirobox.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $().piroBox({
+            my_speed: 400, //animation speed
+            bg_alpha: 0.1, //background opacity
+            slideShow : true, // true == slideshow on, false == slideshow off
+            slideSpeed : 4, //slideshow duration in seconds(3 to 6 Recommended)
+            close_all : '.piro_close,.piro_overlay'// add class .piro_overlay(with comma)if you want overlay click close piroBox
+        });
+    });
+</script>
 <div class="search-nav">
     <form class="form-inline" action="<?= Url::toRoute('/article/about/index') ?>" method="get">
         <div class="form-group input-group-sm">
@@ -22,6 +37,7 @@ use common\components\Tools;
     <tr>
         <th>序号</th>
         <th>个人介绍名称</th>
+        <th>头像</th>
         <th>赞的数量</th>
         <th>个人介绍内容</th>
         <th>操作</th>
@@ -30,11 +46,12 @@ use common\components\Tools;
     <tbody>
     <?php $k=($pages->limit) * ($pages->page);foreach ($info as $val): ?>
         <tr>
-            <td><?= ++$k; ?></td>
-            <td><?= $val->name; ?></td>
-            <td><?= $val->praise;?></td>
-            <td><?= Tools::cutUtf8(strip_tags($val->content),30);?></td>
-            <td>
+            <td style="vertical-align: middle;"><?= ++$k; ?></td>
+            <td style="vertical-align: middle;"><?= $val->name; ?></td>
+            <td style="vertical-align: middle;"><a href="<?= $val->img_url?>" class="pirobox_gall" title=""><img src="<?= $val->img_url?>" alt="<?= $val->name.'图片';?>" width="80" height="50"></a></td>
+            <td style="vertical-align: middle;"><?= $val->praise;?></td>
+            <td style="vertical-align: middle;"><?= Tools::cutUtf8(strip_tags($val->content),30);?></td>
+            <td style="vertical-align: middle;">
                 <a class="btn btn-success buttonbtn btn-info button"
                    href='javascript:window.location.href="<?php echo Url::toRoute(['/article/about/info', 'id' => $val->id]); ?>"'><i
                         class="glyphicon glyphicon-zoom-in"></i> 查看</a>

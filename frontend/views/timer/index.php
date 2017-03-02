@@ -28,6 +28,33 @@ use yii\helpers\Url;
     <script type="text/javascript" src="/js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
     <script type="text/javascript" src="/js/jquery.fancybox-media.js?v=1.0.5"></script>
 
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.fancybox').fancybox();
+            $(".fancybox-effects-c").fancybox({
+                wrapCSS    : 'fancybox-custom',
+                closeClick : true,
+                openEffect : 'none',
+                helpers : {
+                    title : {
+                        type : 'inside'
+                    },
+                    overlay : {
+                        css : {
+                            'background' : 'rgba(238,238,238,0.85)'
+                        }
+                    }
+                }
+            });
+            $("#single_1").fancybox({
+                helpers: {
+                    title : {
+                        type : 'float'
+                    }
+                }
+            });
+        });
+    </script>
     <style type="text/css">
         .fancybox-custom .fancybox-skin {
             box-shadow: 0 0 50px #222;
@@ -50,7 +77,7 @@ use yii\helpers\Url;
     </script>
 </head>
 <body style="cursor: url(http://m.jinsom.cn/wp-content/uploads/2016/11/3.gif),auto;">
-<header id="container2" style="background: #226039 url(http://m.jinsom.cn/wp-content/themes/jinsomM/images/bg/2.jpg) center 0 scroll no-repeat;">
+<header id="container2" style="background: #226039 url(/image/2.jpg) center 0 scroll no-repeat;">
     <div class="popover left" data-easein="cardInLeft" data-easeout="cardOutLeft" id="pop7">
         <div class="arrow"></div>
         <div class="popover-inner">
