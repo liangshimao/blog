@@ -11,16 +11,12 @@ class Left extends ActiveRecord
 
     public static function tableDesc()
     {
-        return '标签';
+        return '留言';
     }
 
-    public static function getAll($name = '',$pageSize)
+    public static function getAll($pageSize)
     {
-        $query = self::find();
-        if(!empty($name)){
-            $query->andFilterWhere(['like','name',$name]);
-        }
-
+        $query = self::find()->where(['del_flag' => DEL_FLAG_FALSE])->orderBy(['add_time' => SORT_DESC]);
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize' => $pageSize]);
         $info['data'] = $query->offset($pages->offset)->limit($pages->limit)->all();

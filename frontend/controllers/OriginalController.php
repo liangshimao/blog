@@ -1,15 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: smile
- * Date: 17-2-27
- * Time: 下午4:28
- */
-
 namespace frontend\controllers;
-
-
 use common\components\OutPut;
+use common\models\article\About;
 use common\models\article\Original;
 use yii\web\Controller;
 use Yii;
@@ -18,16 +10,20 @@ class OriginalController extends Controller
     public function actionIndex()
     {
         $list = Original::getAll('',5);
+        $model = About::getOne();
         return $this->renderPartial('index',[
             'list' => $list['data'],
+            'model' => $model,
         ]);
     }
 
     public function actionDetail($id)
     {
+        $about =  About::getOne();
         $model = Original::findOne($id);
         return $this->renderPartial('detail', [
             'model' => $model,
+            'about' => $about,
         ]);
     }
 

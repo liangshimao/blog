@@ -122,11 +122,10 @@ use yii\helpers\Url;
             <li id="menu-item-162" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-162"><a href="<?=Url::toRoute('/beauty/index')?>">优美散文</a></li>
             <li id="menu-item-191" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-191"><a href="<?=Url::toRoute('/positive/index')?>">正能量</a></li>
             <li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="<?=Url::toRoute('/left/index')?>">留言板</a></li>
-            <li id="menu-item-408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-408"><a href="http://http://m.jinsom.cn/">更多  <i class="fa fa-angle-down"></i></a>
+            <li id="menu-item-408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-408"><a href="javascript:;">更多  <i class="fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
-                    <li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353"><a href="http://m.jinsom.cn/jinsomm">更新</a></li>
-                    <li id="menu-item-402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-402"><a target="_blank" href="http://jinsom.cn/">jinsom</a></li>
-                    <li id="menu-item-428" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-428"><a href="http://m.jinsom.cn/buy">购买主题</a></li>
+                    <li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353"><a href="javascript:;">更新</a></li>
+                    <li id="menu-item-428" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-428"><a href="javascript:;">购买主题</a></li>
                 </ul>
         </ul>
     </div>
@@ -155,9 +154,9 @@ use yii\helpers\Url;
 <div class="bloglist">
     <?php foreach ($timer as $value):?>
     <ul class="arrow_box">
-        <img src="/image/xinqing/2.png" class="status-img">
+        <img src="<?=isset($value->mood->img_url)?$value->mood->img_url:'';?>" class="status-img">
         <div class="sy">
-            <p><img src="http://m.jinsom.cn/wp-content/uploads/2016/08/S0Z0U3RDblVHU0lkMWZVeHdTanNQZUV4OFZaa1I0VnNISm1ObzdUQzJBY0JjV3ZsQVFUbkF3PT0.jpg">
+            <p><img src="<?=$value->img_url;?>">
                 <p><?=$value->name;?></p>
             </p>
         </div>
@@ -198,7 +197,7 @@ use yii\helpers\Url;
 </script>
 <footer>
     <div class="footavatar">
-        <img src="http://m.jinsom.cn/wp-content/uploads/2016/08/photo.jpg" class="footphoto">
+        <img src="<?=$model->img_url;?>" class="footphoto">
         <ul class="footinfo">
             <p class="fname"><a href="#" >加菲猫</a></p>
             <p class="finfo">兴趣：养猫，旅行，音乐</p>

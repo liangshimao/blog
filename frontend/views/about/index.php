@@ -136,11 +136,10 @@ use yii\helpers\Url;
             <li id="menu-item-162" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-162"><a href="<?=Url::toRoute('/beauty/index')?>">优美散文</a></li>
             <li id="menu-item-191" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-191"><a href="<?=Url::toRoute('/positive/index')?>">正能量</a></li>
             <li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="<?=Url::toRoute('/left/index')?>">留言板</a></li>
-            <li id="menu-item-408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-408"><a href="http://http://m.jinsom.cn/">更多  <i class="fa fa-angle-down"></i></a>
+            <li id="menu-item-408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-408"><a href="javascript:;">更多  <i class="fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
-                    <li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353"><a href="http://m.jinsom.cn/jinsomm">更新</a></li>
-                    <li id="menu-item-402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-402"><a target="_blank" href="http://jinsom.cn/">jinsom</a></li>
-                    <li id="menu-item-428" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-428"><a href="http://m.jinsom.cn/buy">购买主题</a></li>
+                    <li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353"><a href="javascript:;">更新</a></li>
+                    <li id="menu-item-428" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-428"><a href="javascript:;">购买主题</a></li>
                 </ul>
         </ul>
     </div>
@@ -220,7 +219,7 @@ use yii\helpers\Url;
             <h1 class="t_nav"><span>人来人往，匆匆忙忙，谁能对谁留下半点回忆。</span><a href="#" class="n2">关于我</a></h1>
             <article>
                 <h2 class="title">
-                    <img src="http://m.jinsom.cn/wp-content/uploads/2016/08/photo.jpg" style="width: 120px;height: 120px;">
+                    <img src="<?=$model->img_url;?>" style="width: 120px;height: 120px;">
                     <p>加菲猫</p>
                     <div class="v-address">北京·海淀</div>
                     <m class="post-like">
@@ -233,12 +232,7 @@ use yii\helpers\Url;
 
                     <p><?=$model->content;?></p>
                 </ul>
-                <div class="textfoot">
-
-                    <div class="weixin" href="javascript:void(0);" id="qr-weixin"></div>   <a href="http://qq.com" target="_blank"><div class="qq"></div></a> <a href="http://qzone.qq.com" target="_blank"><div class="qqzone"></div></a>  <a href="http://weibo.com" target="_blank"><div class="weibo"></div></a><a href="http://douban.com" target="_blank"><div class="douban"></div></a><a href="http://taobao.com" target="_blank"><div class="taobao"></div></a> <a href="http://zhihu.com" target="_blank"><div class="zhihu"></div></a> <a href="http://renren.com" target="_blank"><div class="renren"></div></a>
-
-
-                </div>
+                
             </article>
 
             <div id="wechat-qrcode-popup" class="wechat-qrcode-popup displayNone" style="top: 3773px; left: 255.141px; display: none;"> </div>
@@ -325,7 +319,7 @@ use yii\helpers\Url;
 <div class="blank"></div>
 <footer>
     <div class="footavatar">
-        <img src="http://m.jinsom.cn/wp-content/uploads/2016/08/photo.jpg" class="footphoto">
+        <img src="<?=$model->img_url;?>" class="footphoto">
         <ul class="footinfo">
             <p class="fname"><a href="#" >加菲猫</a></p>
             <p class="finfo">兴趣：养猫，旅行，音乐</p>

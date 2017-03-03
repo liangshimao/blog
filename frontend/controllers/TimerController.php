@@ -10,6 +10,7 @@ namespace frontend\controllers;
 
 
 use common\components\OutPut;
+use common\models\article\About;
 use common\models\article\Timer;
 use yii\web\Controller;
 use Yii;
@@ -18,8 +19,10 @@ class TimerController extends Controller
     public function actionIndex()
     {
         $timer = Timer::getAll('',10);
+        $model = About::getOne();
         return $this->renderPartial('index',[
             'timer' => $timer['data'],
+            'model' => $model,
         ]);
     }
 

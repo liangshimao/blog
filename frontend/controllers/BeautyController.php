@@ -10,6 +10,7 @@ namespace frontend\controllers;
 
 
 use common\components\OutPut;
+use common\models\article\About;
 use common\models\article\Beauty;
 use yii\web\Controller;
 use Yii;
@@ -18,16 +19,20 @@ class BeautyController extends Controller
     public function actionIndex()
     {
         $list = Beauty::getAll('',5);
+        $model = About::getOne();
         return $this->renderPartial('index',[
             'list' => $list['data'],
+            'model' => $model,
         ]);
     }
 
     public function actionDetail($id)
     {
+        $about =  About::getOne();
         $model = Beauty::findOne($id);
         return $this->renderPartial('detail', [
             'model' => $model,
+            'about' => $about,
         ]);
     }
 

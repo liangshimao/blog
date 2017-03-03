@@ -38,7 +38,7 @@ $config = [
             'class' => 'yii\web\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'suffix' => '',
+            'suffix' => '.html',
             'cache' => false,
             'rules' => [
             ],

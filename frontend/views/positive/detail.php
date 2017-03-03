@@ -116,16 +116,15 @@ use yii\helpers\Url;
     <div id="nav" class="menu-%e7%94%b5%e8%84%91%e8%8f%9c%e5%8d%95-container">
         <ul id="menu-%e7%94%b5%e8%84%91%e8%8f%9c%e5%8d%95" class="menu">
             <li id="menu-item-158" class="menu-item menu-item-type-post_type menu-item-object-page page_item menu-item-158"><a href="<?=Url::toRoute('/about/index')?>">关于我</a></li>
-            <li id="menu-item-161" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-161 current-menu-item current_page_item "><a href="<?=Url::toRoute('/original/index')?>">生活感悟</a></li>
+            <li id="menu-item-161" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-161"><a href="<?=Url::toRoute('/original/index')?>">生活感悟</a></li>
             <li id="menu-item-163" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-163"><a href="<?=Url::toRoute('/timer/index')?>">碎言碎语</a></li>
             <li id="menu-item-162" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-162"><a href="<?=Url::toRoute('/beauty/index')?>">优美散文</a></li>
-            <li id="menu-item-191" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-191"><a href="<?=Url::toRoute('/positive/index')?>">正能量</a></li>
+            <li id="menu-item-191" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-191 current-menu-item current_page_item "><a href="<?=Url::toRoute('/positive/index')?>">正能量</a></li>
             <li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="<?=Url::toRoute('/left/index')?>">留言板</a></li>
-            <li id="menu-item-408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-408"><a href="http://http://m.jinsom.cn/">更多  <i class="fa fa-angle-down"></i></a>
+            <li id="menu-item-408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-408"><a href="javascript:;">更多  <i class="fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
-                    <li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353"><a href="http://m.jinsom.cn/jinsomm">更新</a></li>
-                    <li id="menu-item-402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-402"><a target="_blank" href="http://jinsom.cn/">jinsom</a></li>
-                    <li id="menu-item-428" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-428"><a href="http://m.jinsom.cn/buy">购买主题</a></li>
+                    <li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353"><a href="javascript:;">更新</a></li>
+                    <li id="menu-item-428" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-428"><a href="javascript:;">购买主题</a></li>
                 </ul>
         </ul>
     </div>
@@ -168,15 +167,15 @@ use yii\helpers\Url;
     <aside>
         <div class="sidebar-avatar">
             <div class="avatar">
-                <a href="<?=Url::toRoute('/')?>">
-                    <img src="http://m.jinsom.cn/wp-content/uploads/2016/08/photo.jpg">
+                <a href="<?=Url::toRoute('/about/index')?>">
+                    <img src="<?=$about->img_url;?>">
                 </a>
             </div>
             <div class="userinfo">
                 <p class="btns">
-                    <a href="http://m.jinsom.cn/guestbook">留言</a>
-                    <a href="http://m.jinsom.cn/category/tuji">图集</a>
-                    <a href="http://m.jinsom.cn/zahuopu_category/zahuopu">杂货铺</a>
+                    <a href="javascript:;">留言</a>
+                    <a href="javascript:;">图集</a>
+                    <a href="javascript:;">杂货铺</a>
                 </p>
 
             </div>
@@ -304,9 +303,9 @@ use yii\helpers\Url;
 
     <footer>
         <div class="footavatar">
-            <img src="http://m.jinsom.cn/wp-content/uploads/2016/08/photo.jpg" class="footphoto">
+            <img src="<?=$about->img_url;?>" class="footphoto">
             <ul class="footinfo">
-                <p class="fname"><a href="#" >林可可</a></p>
+                <p class="fname"><a href="#" >加菲猫</a></p>
                 <p class="finfo">兴趣：养猫，旅行，音乐</p>
                 <p class="finfo">性格：可冷可热、小逗比、</p>
                 <div style="float:right;font-size: 16px;">——越努力，越幸运！</div>
