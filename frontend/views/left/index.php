@@ -450,7 +450,7 @@ use yii\helpers\Url;
                     '</article>';
 
                     $("#addnewcomment").after(html);
-                    $("#comment"+ res.data.id).fadeIn();
+                    $("#comment"+ res.data.id).fadeIn(40);
                     $("input[name=url]").val('');
                     $("input[name=email]").val('');
                     $("input[name=author]").val('');

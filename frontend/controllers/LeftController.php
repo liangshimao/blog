@@ -35,7 +35,7 @@ class LeftController extends Controller
         $comment = Yii::$app->request->post('comment');
         $comment = $this->moodToImg($comment);
         if(!$comment){
-            OutPut::returnJson('失败',201);
+            OutPut::returnJson('失败，comment为空',201);
         }
         $params = [
             'author' => $author,
@@ -54,57 +54,64 @@ class LeftController extends Controller
 
     private function moodToImg($text)
     {
-//        if(!strpos($text,'/')){
+//        if(strpos($text,'/微笑') === false && strpos($text,'/可爱') ===false && strpos($text,'/害羞') ===false && strpos($text,'/加油') ===false && strpos($text,'/亲亲') ===false && strpos($text,'/色') ===false && strpos($text,'/坏坏') ===false && strpos($text,'/大哭') ===false && strpos($text,'/不错') ===false && strpos($text,'/猪头') ===false && strpos($text,'/阳光') ===false && strpos($text,'/喜欢') ===false){
 //            return $text;
 //        }
+        if(strpos($text,'/微笑') === false){
+            return "y";
+        }else{
+            return "n";
+        }
+
         if(strpos($text,'/微笑')){
-            $str = str_replace('/微笑','313' , $text);
+            $str = str_replace('/微笑','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/1.gif" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
             $this->moodToImg($str);
         }
-//        if(strpos($text,'/可爱')){
-//            $str = str_replace('/可爱','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/2.gif" alt="/可爱" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
-//            $this->moodToImg($str);
-//        }
-//        if(strpos($text,'/害羞')){
-//            $str = str_replace('/害羞','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/3.gif" alt="/害羞" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
-//            $this->moodToImg($str);
-//        }
-//        if(strpos($text,'/加油')){
-//            $str = str_replace('/加油','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/4.gif" alt="/加油" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
-//            $this->moodToImg($str);
-//        }
-//        if(strpos($text,'/亲亲')){
-//            $str = str_replace('/亲亲','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/5.gif" alt="/亲亲" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
-//            $this->moodToImg($str);
-//        }
-//        if(strpos($text,'/色')){
-//            $str = str_replace('/色','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/6.gif" alt="/色" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
-//            $this->moodToImg($str);
-//        }
-//        if(strpos($text,'/坏坏')){
-//            $str = str_replace('/坏坏','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/7.gif" alt="/坏坏" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
-//            $this->moodToImg($str);
-//        }
-//        if(strpos($text,'/大哭')){
-//            $str = str_replace('/大哭','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/8.gif" alt="/大哭" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
-//            $this->moodToImg($str);
-//        }
-//        if(strpos($text,'/不错')){
-//            $str = str_replace('/不错','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/9.gif" alt="/不错" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
-//            $this->moodToImg($str);
-//        }
-//        if(strpos($text,'/猪头')){
-//            $str = str_replace('/猪头','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/10.gif" alt="/猪头" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
-//            $this->moodToImg($str);
-//        }
-//        if(strpos($text,'/阳光')){
-//            $str = str_replace('/阳光','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/11.gif" alt="/阳光" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
-//            $this->moodToImg($str);
-//        }
-//        if(strpos($text,'/喜欢')){
-//            $str = str_replace('/喜欢','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/12.gif" alt="/喜欢" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
-//            $this->moodToImg($str);
-//        }
+
+        if(strpos($text,'/可爱')){
+            $str = str_replace('/可爱','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/2.gif" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
+            $this->moodToImg($str);
+        }
+        if(strpos($text,'/害羞')){
+            $str = str_replace('/害羞','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/3.gif" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
+            $this->moodToImg($str);
+        }
+        if(strpos($text,'/加油')){
+            $str = str_replace('/加油','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/4.gif" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
+            $this->moodToImg($str);
+        }
+        if(strpos($text,'/亲亲')){
+            $str = str_replace('/亲亲','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/5.gif" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
+            $this->moodToImg($str);
+        }
+        if(strpos($text,'/色')){
+            $str = str_replace('/色','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/6.gif" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
+            $this->moodToImg($str);
+        }
+        if(strpos($text,'/坏坏')){
+            $str = str_replace('/坏坏','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/7.gif"  class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
+            $this->moodToImg($str);
+        }
+        if(strpos($text,'/大哭')){
+            $str = str_replace('/大哭','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/8.gif" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
+            $this->moodToImg($str);
+        }
+        if(strpos($text,'/不错')){
+            $str = str_replace('/不错','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/9.gif" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
+            $this->moodToImg($str);
+        }
+        if(strpos($text,'/猪头')){
+            $str = str_replace('/猪头','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/10.gif" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
+            $this->moodToImg($str);
+        }
+        if(strpos($text,'/阳光')){
+            $str = str_replace('/阳光','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/11.gif" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
+            $this->moodToImg($str);
+        }
+        if(strpos($text,'/喜欢')){
+            $str = str_replace('/喜欢','<img src="http://m.jinsom.cn/wp-content/themes/jinsomM/images/smilies/12.gif" class="wp-smiley" style="height: 1em; max-height: 1em;" />' , $text);
+            $this->moodToImg($str);
+        }
 
     }
 }
