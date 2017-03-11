@@ -154,9 +154,9 @@ use yii\helpers\Url;
 <div class="bloglist">
     <?php foreach ($timer as $value):?>
     <ul class="arrow_box">
-        <img src="<?=isset($value->mood->img_url)?$value->mood->img_url:'';?>" class="status-img">
+        <img src="<?=!empty($value->mood->img_url)?$value->mood->img_url:'/image/xinqing/1.png';?>" class="status-img">
         <div class="sy">
-            <p><img src="<?=$value->img_url;?>">
+            <p><img src="<?=!empty($value->img_url)?$value->img_url:'/image/b00e2d26764e0535600x600.jpg';?>">
                 <p><?=$value->name;?></p>
             </p>
         </div>

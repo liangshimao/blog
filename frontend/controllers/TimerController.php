@@ -18,7 +18,7 @@ class TimerController extends Controller
 {
     public function actionIndex()
     {
-        $timer = Timer::getAll('',10);
+        $timer = Timer::getAll('',PAGESIZE);
         $model = About::getOne();
         return $this->renderPartial('index',[
             'timer' => $timer['data'],

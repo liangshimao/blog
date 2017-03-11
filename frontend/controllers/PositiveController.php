@@ -18,7 +18,7 @@ class PositiveController extends Controller
 {
     public function actionIndex()
     {
-        $list = Positive::getAll('',5);
+        $list = Positive::getAll('',PAGESIZE);
         $model = About::getOne();
         return $this->renderPartial('index',[
             'list' => $list['data'],

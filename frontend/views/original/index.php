@@ -181,37 +181,31 @@ use common\components\Tools;
         <section class="taglist">
             <h2>全部标签</h2>
             <ul>
-                <a href='http://m.jinsom.cn/tag/%e4%ba%ba%e5%83%8f' class='tag-link-20 tag-link-position-1' title='1个话题' style='font-size: 8pt;'>人像</a>
-                <a href='http://m.jinsom.cn/tag/%e5%81%87%e5%a6%82' class='tag-link-7 tag-link-position-2' title='1个话题' style='font-size: 8pt;'>假如</a>
-                <a href='http://m.jinsom.cn/tag/%e5%8f%af%e7%88%b1' class='tag-link-27 tag-link-position-3' title='6个话题' style='font-size: 22pt;'>可爱</a>
-                <a href='http://m.jinsom.cn/tag/%e5%90%8a%e5%b8%a6%e8%a1%ab' class='tag-link-33 tag-link-position-4' title='1个话题' style='font-size: 8pt;'>吊带衫</a>
-                <a href='http://m.jinsom.cn/tag/%e5%94%af%e7%be%8e' class='tag-link-28 tag-link-position-5' title='2个话题' style='font-size: 12.581818181818pt;'>唯美</a>
-                <a href='http://m.jinsom.cn/tag/%e5%a4%8f%e5%a4%a9' class='tag-link-14 tag-link-position-6' title='2个话题' style='font-size: 12.581818181818pt;'>夏天</a>
-                <a href='http://m.jinsom.cn/tag/%e5%a5%b3%e7%a5%9e' class='tag-link-9 tag-link-position-7' title='5个话题' style='font-size: 20.218181818182pt;'>女神</a>
-                <a href='http://m.jinsom.cn/tag/%e5%b0%8f%e6%b8%85%e6%96%b0' class='tag-link-18 tag-link-position-8' title='4个话题' style='font-size: 18.181818181818pt;'>小清新</a>
-                <a href='http://m.jinsom.cn/tag/%e5%b0%91%e5%a5%b3' class='tag-link-15 tag-link-position-9' title='1个话题' style='font-size: 8pt;'>少女</a>
-                <a href='http://m.jinsom.cn/tag/%e5%b8%bd%e5%ad%90' class='tag-link-25 tag-link-position-10' title='3个话题' style='font-size: 15.636363636364pt;'>帽子</a>
-                <a href='http://m.jinsom.cn/tag/%e6%89%8e%e8%be%ab' class='tag-link-34 tag-link-position-11' title='1个话题' style='font-size: 8pt;'>扎辫</a>
-                <a href='http://m.jinsom.cn/tag/%e6%91%84%e5%bd%b1' class='tag-link-16 tag-link-position-12' title='1个话题' style='font-size: 8pt;'>摄影</a>
-                <a href='http://m.jinsom.cn/tag/%e6%95%a3%e5%9c%ba' class='tag-link-6 tag-link-position-13' title='1个话题' style='font-size: 8pt;'>散场</a>
-                <a href='http://m.jinsom.cn/tag/%e6%96%87%e8%89%ba' class='tag-link-12 tag-link-position-14' title='2个话题' style='font-size: 12.581818181818pt;'>文艺</a>
-                <a href='http://m.jinsom.cn/tag/%e6%96%87%e8%89%ba%e8%8c%83' class='tag-link-21 tag-link-position-15' title='1个话题' style='font-size: 8pt;'>文艺范</a>
-                <a href='http://m.jinsom.cn/tag/%e6%97%a5%e7%b3%bb' class='tag-link-17 tag-link-position-16' title='1个话题' style='font-size: 8pt;'>日系</a>
-                <a href='http://m.jinsom.cn/tag/%e6%b0%94%e7%90%83' class='tag-link-19 tag-link-position-17' title='1个话题' style='font-size: 8pt;'>气球</a>
-                <a href='http://m.jinsom.cn/tag/%e6%b5%81%e5%b9%b4' class='tag-link-5 tag-link-position-18' title='1个话题' style='font-size: 8pt;'>流年</a>
-                <a href='http://m.jinsom.cn/tag/%e6%b8%85%e6%96%b0' class='tag-link-11 tag-link-position-19' title='6个话题' style='font-size: 22pt;'>清新</a>
-                <a href='http://m.jinsom.cn/tag/%e6%b8%b8%e6%b3%b3' class='tag-link-31 tag-link-position-20' title='1个话题' style='font-size: 8pt;'>游泳</a>
-                <a href='http://m.jinsom.cn/tag/%e7%8c%ab' class='tag-link-32 tag-link-position-21' title='1个话题' style='font-size: 8pt;'>猫</a>
-                <a href='http://m.jinsom.cn/tag/%e7%99%bd%e8%89%b2' class='tag-link-10 tag-link-position-22' title='1个话题' style='font-size: 8pt;'>白色</a>
-                <a href='http://m.jinsom.cn/tag/%e7%9c%bc%e7%9d%9b' class='tag-link-22 tag-link-position-23' title='1个话题' style='font-size: 8pt;'>眼睛</a>
-                <a href='http://m.jinsom.cn/tag/%e7%9f%ad%e5%8f%91' class='tag-link-24 tag-link-position-24' title='4个话题' style='font-size: 18.181818181818pt;'>短发</a>
-                <a href='http://m.jinsom.cn/tag/%e7%a9%bf%e6%90%ad' class='tag-link-23 tag-link-position-25' title='1个话题' style='font-size: 8pt;'>穿搭</a>
-                <a href='http://m.jinsom.cn/tag/%e7%af%ae%e7%90%83' class='tag-link-29 tag-link-position-26' title='1个话题' style='font-size: 8pt;'>篮球</a>
-                <a href='http://m.jinsom.cn/tag/%e7%ba%a2%e8%89%b2' class='tag-link-35 tag-link-position-27' title='1个话题' style='font-size: 8pt;'>红色</a>
-                <a href='http://m.jinsom.cn/tag/%e8%90%8c' class='tag-link-13 tag-link-position-28' title='1个话题' style='font-size: 8pt;'>萌</a>
-                <a href='http://m.jinsom.cn/tag/%e8%bf%90%e5%8a%a8' class='tag-link-26 tag-link-position-29' title='1个话题' style='font-size: 8pt;'>运动</a>
-                <a href='http://m.jinsom.cn/tag/%e9%95%bf%e5%8f%91' class='tag-link-30 tag-link-position-30' title='1个话题' style='font-size: 8pt;'>长发</a>
-                <a href='http://m.jinsom.cn/tag/%e9%9d%92%e6%98%a5' class='tag-link-4 tag-link-position-31' title='2个话题' style='font-size: 12.581818181818pt;'>青春</a>
+                <a href='javascript:;' class='tag-link-20 tag-link-position-1' style='font-size: 8pt;'>个性刚猛</a>
+                <a href='javascript:;' class='tag-link-27 tag-link-position-3' style='font-size: 22pt;'>可爱</a>
+                <a href='javascript:;' class='tag-link-33 tag-link-position-4' style='font-size: 8pt;'>孩子气</a>
+                <a href='javascript:;' class='tag-link-28 tag-link-position-5' style='font-size: 12.581818181818pt;'>闷骚</a>
+                <a href='javascript:;' class='tag-link-9 tag-link-position-7' style='font-size: 20.218181818182pt;'>好奇宝宝</a>
+                <a href='javascript:;' class='tag-link-18 tag-link-position-8' style='font-size: 18.181818181818pt;'>萌萌哒</a>
+                <a href='javascript:;' class='tag-link-15 tag-link-position-9' style='font-size: 8pt;'>冒险家</a>
+                <a href='javascript:;' class='tag-link-25 tag-link-position-10' style='font-size: 15.636363636364pt;'>帽子</a>
+                <a href='javascript:;' class='tag-link-6 tag-link-position-13' style='font-size: 8pt;'>散场</a>
+                <a href='javascript:;' class='tag-link-12 tag-link-position-14' style='font-size: 12.581818181818pt;'>有艺术才华</a>
+                <a href='javascript:;' class='tag-link-21 tag-link-position-15' style='font-size: 8pt;'>文艺范</a>
+                <a href='javascript:;' class='tag-link-17 tag-link-position-16' style='font-size: 8pt;'>加菲猫</a>
+                <a href='javascript:;' class='tag-link-19 tag-link-position-17' style='font-size: 8pt;'>气球</a>
+                <a href='javascript:;' class='tag-link-5 tag-link-position-18' style='font-size: 8pt;'>流年</a>
+                <a href='javascript:;' class='tag-link-11 tag-link-position-19' style='font-size: 22pt;'>清新</a>
+                <a href='javascript:;' class='tag-link-31 tag-link-position-20' style='font-size: 8pt;'>如风</a>
+                <a href='javascript:;' class='tag-link-32 tag-link-position-21' style='font-size: 8pt;'>猫咪</a>
+                <a href='javascript:;' class='tag-link-10 tag-link-position-22' style='font-size: 8pt;'>大懒虫</a>
+                <a href='javascript:;' class='tag-link-22 tag-link-position-23' style='font-size: 8pt;'>IT男</a>
+                <a href='javascript:;' class='tag-link-24 tag-link-position-24' style='font-size: 18.181818181818pt;'>摩羯座</a>
+                <a href='javascript:;' class='tag-link-23 tag-link-position-25' style='font-size: 8pt;'>不修边幅</a>
+                <a href='javascript:;' class='tag-link-29 tag-link-position-26' style='font-size: 8pt;'>篮球</a>
+                <a href='javascript:;' class='tag-link-13 tag-link-position-28' style='font-size: 8pt;'>萌</a>
+                <a href='javascript:;' class='tag-link-26 tag-link-position-29' style='font-size: 8pt;'>运动</a>
+                <a href='javascript:;' class='tag-link-4 tag-link-position-31' style='font-size: 12.581818181818pt;'>无刺激不青春</a>
             </ul>
         </section>
         <div id="float_a" class="div_a">

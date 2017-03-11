@@ -2,7 +2,7 @@
 use yii\helpers\Url;
 use \kucha\ueditor\UEditor;
 ?>
-<form name="myform" id="myform" action="<?=Url::toRoute(['/article/about/add']) ?>" method="post">
+<form name="myform" id="myform" action="<?=Url::toRoute(['/article/about/add']) ?>" method="post" enctype="multipart/form-data">
     <div class="common-form">
         <table width="100%" class="table_form contentWrap">
             <tbody>

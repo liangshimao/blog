@@ -9,7 +9,7 @@ class OriginalController extends Controller
 {
     public function actionIndex()
     {
-        $list = Original::getAll('',5);
+        $list = Original::getAll('',PAGESIZE);
         $model = About::getOne();
         return $this->renderPartial('index',[
             'list' => $list['data'],

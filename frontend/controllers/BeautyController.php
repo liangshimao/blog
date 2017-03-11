@@ -18,7 +18,7 @@ class BeautyController extends Controller
 {
     public function actionIndex()
     {
-        $list = Beauty::getAll('',5);
+        $list = Beauty::getAll('',PAGESIZE);
         $model = About::getOne();
         return $this->renderPartial('index',[
             'list' => $list['data'],
